@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kost Sejahtera - Hunian Nyaman & Strategis</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- File CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header / Navigasi -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Kost<span>Sejahtera</span></a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Beranda</a></li>
+                    <li><a href="#kamar" class="nav-link">Pilihan Kamar</a></li>
+                    <li><a href="#fasilitas" class="nav-link">Fasilitas Umum</a></li>
+                    <li><a href="#lokasi" class="nav-link">Lokasi</a></li>
+                    <li><a href="#kontak" class="nav-link">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section dengan Form Pencarian/Filter -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <h1>Cari Kost Nyaman, Aman & <span>Harga Terjangkau</span></h1>
+                <p>Hunian strategis dekat kampus & pusat kota dengan fasilitas lengkap siap pakai.</p>
+                
+                <!-- Filter Kamar -->
+                <div class="search-box">
+                    <div class="search-item">
+                        <label for="filter-tipe">Tipe Kamar</label>
+                        <select id="filter-tipe">
+                            <option value="all">Semua Tipe</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Deluxe">Deluxe (AC)</option>
+                            <option value="VIP">VIP (Kamar Mandi Dalam)</option>
+                        </select>
+                    </div>
+                    <div class="search-item">
+                        <label for="filter-gender">Penghuni</label>
+                        <select id="filter-gender">
+                            <option value="all">Semua</option>
+                            <option value="Putra">Khusus Putra</option>
+                            <option value="Putri">Khusus Putri</option>
+                            <option value="Campur">Campur</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" id="btn-search">Cari Kamar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daftar Kamar / Katalog -->
+        <section id="kamar" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Pilihan Kamar Tersedia</h2>
+                    <p>Pilih kamar sesuai dengan kebutuhan dan anggaran Anda</p>
+                </div>
+
+                <div class="kamar-grid" id="kamar-container">
+                    <!-- Kamar 1 -->
+                    <div class="kamar-card" data-tipe="Deluxe" data-gender="Putri">
+                        <div class="kamar-badge available">Tersedia</div>
+                        <div class="kamar-img">
+                            <div class="img-placeholder">🛏️ Kamar Deluxe</div>
+                        </div>
+                        <div class="kamar-body">
+                            <div class="kamar-tag">Khusus Putri</div>
+                            <h3>Kamar Deluxe AC - Tipe A</h3>
+                            <p class="kamar-price">Rp 1.500.000 <span>/ bulan</span></p>
+                            <ul class="fasilitas-list">
+                                <li>📶 WiFi Cepat</li>
+                                <li>❄️ AC</li>
+                                <li>🚿 Kamar Mandi Dalam</li>
+                                <li>🧺 Kasur & Lemari</li>
+                            </ul>
+                            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Kamar%20Deluxe%20AC%20-%20Tipe%20A" target="_blank" class="btn btn-wa">Booking via WA</a>
+                        </div>
+                    </div>
+
+                    <!-- Kamar 2 -->
+                    <div class="kamar-card" data-tipe="Standard" data-gender="Putra">
+                        <div class="kamar-badge available">Tersedia</div>
+                        <div class="kamar-img">
+                            <div class="img-placeholder">🛋️ Kamar Standard</div>
+                        </div>
+                        <div class="kamar-body">
+                            <div class="kamar-tag">Khusus Putra</div>
+                            <h3>Kamar Standard Fan - Tipe B</h3>
+                            <p class="kamar-price">Rp 850.000 <span>/ bulan</span></p>
+                            <ul class="fasilitas-list">
+                                <li>📶 WiFi Cepat</li>
+                                <li>🌀 Kipas Angin</li>
+                                <li>🚿 Kamar Mandi Luar</li>
+                                <li>🧺 Kasur & Meja Belajar</li>
+                            </ul>
+                            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Kamar%20Standard%20Fan%20-%20Tipe%20B" target="_blank" class="btn btn-wa">Booking via WA</a>
+                        </div>
+                    </div>
+
+                    <!-- Kamar 3 -->
+                    <div class="kamar-card" data-tipe="VIP" data-gender="Campur">
+                        <div class="kamar-badge full">Penuh</div>
+                        <div class="kamar-img">
+                            <div class="img-placeholder">✨ Kamar VIP</div>
+                        </div>
+                        <div class="kamar-body">
+                            <div class="kamar-tag">Campur</div>
+                            <h3>Kamar VIP Balkon - Tipe C</h3>
+                            <p class="kamar-price">Rp 2.100.000 <span>/ bulan</span></p>
+                            <ul class="fasilitas-list">
+                                <li>📶 WiFi Cepat</li>
+                                <li>❄️ AC & TV</li>
+                                <li>🚿 Water Heater</li>
+                                <li>🌅 Balkon Pribadi</li>
+                            </ul>
+                            <button class="btn btn-disabled" disabled>Kamar Penuh</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fasilitas Umum -->
+        <section id="fasilitas" class="section bg-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Fasilitas Bersama</h2>
+                    <p>Fasilitas lengkap untuk menunjang kenyamanan Anda sehari-hari</p>
+                </div>
+                <div class="fasilitas-grid">
+                    <div class="fasilitas-card">
+                        <div class="icon">🍳</div>
+                        <h4>Dapur Bersama</h4>
+                        <p>Dilengkapi kompor, kulkas, dan peralatan masak standar.</p>
+                    </div>
+                    <div class="fasilitas-card">
+                        <div class="icon">🅿️</div>
+                        <h4>Parkir Luas</h4>
+                        <p>Area parkir motor & mobil aman terlindung dari hujan.</p>
+                    </div>
+                    <div class="fasilitas-card">
+                        <div class="icon">📹</div>
+                        <h4>Keamanan CCTV 24/7</h4>
+                        <p>Sistem keamanan terpantau penuh serta akses gerbang kunci digital.</p>
+                    </div>
+                    <div class="fasilitas-card">
+                        <div class="icon">🧺</div>
+                        <h4>Area Jemur & Laundry</h4>
+                        <p>Tersedia mesin cuci bersama dan tempat penjemuran pakaian.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Pemesanan / Tanya Pemilik -->
+        <section id="kontak" class="section">
+            <div class="container">
+                <div class="contact-box">
+                    <div class="section-title">
+                        <h2>Tanya Pemilik Kost</h2>
+                        <p>Isi formulir berikut untuk mengajukan pertanyaan atau survei lokasi secara langsung</p>
+                    </div>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" placeholder="Contoh: Ahmad Fauzi" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telepon">Nomor WhatsApp</label>
+                            <input type="tel" id="telepon" placeholder="Contoh: 08123456789" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pilihan-kamar">Pilihan Kamar</label>
+                            <select id="pilihan-kamar" required>
+                                <option value="Deluxe AC - Tipe A">Kamar Deluxe AC - Rp 1.500.000</option>
+                                <option value="Standard Fan - Tipe B">Kamar Standard Fan - Rp 850.000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tanggal-masuk">Rencana Tanggal Masuk</label>
+                            <input type="date" id="tanggal-masuk" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Kirim via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Kost Sejahtera. Seluruh Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- File JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>
